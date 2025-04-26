@@ -1,0 +1,323 @@
+<!-- Telling a browser this is html code-->
+<!DOCTYPE html>
+
+<html>
+  <!-- informations about the page-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is Piotr Domiter's portfolio page" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Piotr Domiter's Portfolio</title>
+  </head>
+  
+  <body>
+    <!--  KONTERNER PIERWSZY TYTUŁOWY -->
+    <div class="StartCont ScrollClass"> 
+      <div class="StartCont_Right" id="ToDelete">
+        <h1 class="StartText_Header StartTextAnimation1">HELLO WORLD!</h1>
+      </div>
+      <div class="StartCont_Right">
+        <h1 class="StartText_Header StartTextAnimation2">THIS IS</h1>
+        <h1 class="StartText_Name StartTextAnimation2">PIOTR DOMITER 's</h1>
+        <h1 class="StartText_Header StartTextAnimation2">PORTFOLIO</h1>
+        <a href="#AboutMe" id="ArrowDown"
+          ><img src="images/arrow.png" class="ArrowDownImg"
+        /></a>
+      </div>
+    </div>
+    <!--KONTENER O MNIE-->
+    <div class="AboutMeCont ScrollClass" id="AboutMe">
+      <div class="AboutMeCont_Left">
+        <img class="MyImg" src="images/zdjęcie_oryginalne.jpg" alt="" />
+      </div>
+      <div class="AboutMeCont_Right">
+        <h1 class="AllText_Chapter">ABOUT ME</h1>
+        <p class="AllText_Paragraph">
+          I’m an ambitious and persistent engineer who always follows through on goals – sooner or later, I get them done. 
+          I’m driven by a strong desire to learn and improve, and I find great satisfaction in creating something usefull. I have hands-on experience with C and C++, and basic knowledge of ARM v7 Assembler.
+          I also have a solid understanding of electronics and circuit design, which allows me to take a full-stack approach to embedded systems – from hardware to firmware. I'm looking for a job which offers me 
+          growth and contribute to innovative projects.
+        </p>
+      </div>
+    </div>
+    <!-- KONTENER Z DANYMI KONTAKTOWYMI -->
+    <div class="ContactsCont ScrollClass">
+      <div class="ContactsCont_Right">
+        <h1 class="AllText_Chapter">CONTACT</h1>
+        <div class="ContactCont_List">
+          <img src="images/LinkedIn.png" class="ContactIcon">
+          <a href = "https://www.linkedin.com/in/piotr-domiter-b9670a2b9/?originalSubdomain=pl" target ="_blank"><p class="ContactsText_Paragraph"> @Piotr Domiter LinkedIn</p></a>
+          <img src="images/GitHub.png" class="ContactIcon">
+          <a href = "https://github.com/PDomit" target="_blank"><p class="ContactsText_Paragraph">@PDomit GitHub</p></a>
+          <img src="images/Gmail.png" class="ContactIcon">
+          <a href = "https://github.com/PDomit" target="_blank"><p class="ContactsText_Paragraph">piotrdomiter@gmail.com</p></a>
+        </div>
+      </div>
+    </div>
+    <!-- KONTENER Z PROJEKTAMI -->
+    <div class="ProjectsCont ScrollClass" id = "ProjectsCont">
+      <div class="ProjectCont_Navigation"> 
+        <a><h1 class="ProjectsText_Navigation ProjectsText_Navigation_Activated">PROJECT1</h1></a>
+        <a><h1 class="ProjectsText_Navigation ">PROJECT2</h1></a>
+        <a><h1 class="ProjectsText_Navigation ">PROJECT3</h1></a>
+      </div>
+
+      <div class="ProjectsCont_Slide ProjectsCont_Slide_Activated" > <!-- MECHATRONICS_TESTER--> 
+
+        <div class="ProjectsCont_Left">         
+        </div>
+        <div class="ProjectsCont_Right" id="ProjectsCont_Right_1">
+          <h1 class="AllText_Chapter">DOUBLE CLUTCH GEARBOX MECHATRONICS TESTING UNIT</h1>
+          <hr class="ProjectsObject_Line">
+          <p class="AllText_Paragraph">
+            I designed and built a device for testing tightness of the mechatronics of the DSG DQ200 dual-clutch transmission gearbox. 
+            The project involved both hardware and software development from scratch. The device is controlled from a PC application created by me and fully controls operation of the mechatronics. 
+            The application window is quite simple to use. It has buttons to change valves positions or to start the hydraulic pump. This device helps in detecting faults. A common fault in this mechatronics unit
+            is the loss of pressure too fast because of a crack in the mechatronic's body. The device helps to find out if a mechatronics has a crack or not. This project cosists of several main parts which required different knowledge and skills.
+          </p>
+          <div class="ProjectCont_Right_Sections"> 
+            <img class="ProjectsImages" src="images/Testing.jpg">
+            <div> 
+              <h1 class="AllText_Chapter_2">How does it work ?</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The principle is to start the hydraulic pump by clicking a button in the application window. The pressure rises. When the pressure reaches the appropriate level the pump stops. The device 
+                is connected to mechatronic's pressure sensor and measure the pressure every second. When the pressure falls below the minimum level the pump starts again and 
+                the time interval between stopping and starting the pump is shown in the application window. This time interval helps to detect if the pressure drops too quickly. The procedure can be 
+                repeated after changing the position of the valves for example when changing gears. The photo on the left was taken while testing the pump in the friendly workshop where I have worked
+                and where I was allowed to test my device.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Electrical_circuits.jpg" />
+            <div> 
+              <h1 class="AllText_Chapter_2">Electrical circuits</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The electrical circuits was designed from scratch in order to controll solenoids and the bldc motor. The objective was to design circuits capable of handling up to 30A current and that could be controlled by STM32 microcontroller.
+                The BLDC motors used in those mecahtronics don't have Hall sensors so I had to design circuits which could conduct commutation based on the back emf. The phase voltages had to be measured and filtered to finally provide the information
+                abut the rotor position. I did not have opportunity to obtain PCB so I soldered it together using a universal board.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Running.jpg" />
+            <div> 
+              <h1 class="AllText_Chapter_2">Firmware</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The STM32 board controls BLDC, valves and communicates with PC via UART. The firmware was created in the C language in STM32 Cube IDE environment. The firmware 
+                has not been publicly shared. The photo on the left shows voltage of a phase while the motor is running.
+              </p>
+           </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+           <img class="ProjectsImages" src="images/App.png" />
+           <div> 
+              <h1 class="AllText_Chapter_2">Application</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The application helps send instructions to the device as well as display the information from the device like time between stopping and starting the pump. 
+                The buttons are for changing the valves positions or for starting the pump. The currently selected variant is marked. At the beginning user have to select COM port and click 
+                the 'Connect' button. If PC connects with the device the confirmation message will be displayed. The application works on the Windows operating system.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Cooling.jpg" />
+            <div>
+              <h1 class="AllText_Chapter_2">Future prospects</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The device works properly but it needs to be upgraded. Currently I am working on the housing, cooling and some safety elements that are intended to prevent burning
+                the device from overheating or burning out.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <div></div>
+            <div>
+              <h1 class="AllText_Chapter_2">Technologies, tools, knowledge, problems</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                Languages: C, C#, Assembler<br>
+                Environments: STM32 Cube IDE, Visual Studio<br>
+                PWM, ADC, UART, Timers, BLDC, debugging<br>
+                The most challenging stage was creating bldc controller. This BLDC motor is quite different than most of bldc motors because it has the delta connection inside. I have been dealing with
+                how to make the motor work in closed loop for a while but finally I succeeded. I have never created any Windows application before so I have started learning C# and quickly developed the application.
+                This project gave me a great deal of experience with hardware, firmware and some soft skills such as work organising, documentation. I discovered that writing my thoughts and drawing helps me solve problems
+                more effectively.
+              </p>
+            </div>
+          </div>
+        </div>     
+      </div>
+
+      <div class="ProjectsCont_Slide">  <!-- MEMORY_MANAGEMENT-->
+        <div class="ProjectsCont_Left">
+        </div>
+        <div class="ProjectsCont_Right " id="ProjectsCont_Right_2">
+          <h1 class="AllText_Chapter">MEMORY MANAGEMENT SYSTEM</h1>
+          <hr class="ProjectsObject_Line">
+          <p class="AllText_Paragraph">
+            The memory management system is capable of performing all memory operations on a serial access memory M93C46 with the MICROWIRE™ standard. Currently it can be used with the M93C46 or any memory with the same instruction set.
+            It was designed to write, read, erase data to/from the memory chip. All operations are carried out using UART terminal on a PC. To perform an operation user have to enter appropriate two letters code, data if necessary and accept it by clicking 'Enter' button.
+            A memory are suppsoed to be in x8 bit organization. 
+            The system is able to cooperate with any serial memory but the instruction set must be adjusted depending on the memory chip used. 
+            In the future it will be extended to simplify the process of selecting instruction sets based on used memory. 
+            
+          </p>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Memory_Chip.jpeg" />
+            <div>
+              <h1 class="AllText_Chapter_2">Memory chip and connection</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+               In order to connect the memory to the board, I soldered female jumper wires to the memory and connected it properly to my STM32 board, as shown in the photo on the left . 
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Memory_Putty.png" />
+            <div>
+              <h1 class="AllText_Chapter_2">Working</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                I use PuTTy terminal to perform operations on the memory. In the screenshot on the left I carried out one by one a few of the most important operations. The code, along with a detailed explanation of how 
+                to use it can be found on my GitHub. The link to my GitHub profile is in the Contact section.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <div></div>
+            <div>
+              <h1 class="AllText_Chapter_2">Technologies, tools, knowledge, problems</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                Languages: C <br>
+                Environments: STM32 Cube IDE<br>
+                UART, Timers, MICROWIRE™, debugging<br>
+                The clarity of the code was crucial here. One small mistake in the order of bits sent to the memory chip could ruin the entire transmission or cause a difficult-to-find problem. I had one and found it while 
+                well planned debugging. It was necessary to keep the code easily understandable and clarify because I shared the code. I have learnt some quite simple but really important skills such as naming variables 
+                understandable, writing short but accurate comments and just making the code easy for the others. The scope has been used extensively to ensure that bits are sent in the correct order.
+              </p>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+      <div class="ProjectsCont_Slide" >     <!-- MAGISTERKA-->
+        <div class="ProjectsCont_Left">
+        </div>
+        <div class="ProjectsCont_Right" >
+          <h1 class="AllText_Chapter">Hardware-in-the-Loop simulation</h1>
+          <hr class="ProjectsObject_Line">
+          <p class="AllText_Paragraph">
+            HiL simulation was the topic of my master's thesis. The objective was to build HiL testing station for a car with dual clutch automatic gearbox DQ250. 
+            The testing station consists of: HiL symulator, a Simulink-based car model with the DQ250 gearbox, 
+            STM32 board acting as gearbox controller and a box with a LCD screen and two potentiometers to set brake and gas pedals positions during tests.
+          </p> 
+          <div class="ProjectCont_Right_Sections">
+            <div></div>
+            <div>
+              <h1 class="AllText_Chapter_2">HiL simulator</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The simulator belongs to AGH The University of Science and Technology in Krakówv. The simulator consists of a computer equipped with measurement cards and software that runs simulations based on input signals from the cards and code.
+                generated from the plant model of a car. 
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Simulink.png" id="WiderImage" />
+            <div>
+              <h1 class="AllText_Chapter_2">Plant model</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                To create and generate C code from the plant model, I used Simulink and its libraries. I also used the car’s technical data to create a model that was as realistic as possible.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Stanowisko_pudelko.png" />
+            <div>
+              <h1 class="AllText_Chapter_2">Gearbox's controller</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The STM32 board was chosen as the control unit for the gearbox. I developed firmware to control the gearbox based on output signals from the measurement cards. 
+                These signals include the car’s velocity, currently selected gears (odd and even), and the positions of the gas and brake pedals. 
+                Based on these signals, the controller is able to: shift gears (between even and odd), switch the active clutch, and release both clutches. 
+                The car velocity and pedal position signals are analog, while the information about the currently selected gears is encoded in four bits, making these signals digital.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Kod.png" />
+            <div>
+              <h1 class="AllText_Chapter_2">Firmware</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The firmware was written in C. I created and debugged it using the STM32CubeIDE environment. Several peripherals such as ADC, timers, and GPIOs were used.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Testy.png" />
+            <div>
+              <h1 class="AllText_Chapter_2">Tests</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                Finally, I conducted several tests, and the results were analyzed in my master’s thesis. 
+                I tested whether the car could operate properly, whether changes in the firmware—such as faster clutch engagement or extending the upper engine speed 
+                limit—could improve the car’s dynamics and to what extent, and whether the controller was able to detect faults such as low clutch pressure or gear engagement failure.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Results.png" />
+            <div>
+              <h1 class="AllText_Chapter_2">Results</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The chart on the left is one of many results. It shows the car’s speed during the test. 
+                The blue line represents the speed after modifying the firmware, while the orange line shows the previous version.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <div></div>
+            <div>
+              <h1 class="AllText_Chapter_2">Technologies, tools, knowledge, problems</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                Languages: C, MatLab <br>
+                Environments: STM32 Cube IDE, MatLab&Simulink<br>
+                ADC, Timers, HiL, debugging<br>
+                The most challenging part was creating a well-prepared plant model. I had to learn Simulink on my own, and due to the complexity of the model, 
+                several issues arose. Without a bit of help from someone more experienced, fixing those problems wasn’t easy. However, 
+                I learned how to deal with difficult challenges and improved my problem-solving skills. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ProjectCont_Right_Bottom">
+      </div>
+
+      <a id="ArrowUp"
+      ><img src="images/arrowUp.png" class="ArrowUpImg"
+      /></a>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
+<!-- closing tag-->
