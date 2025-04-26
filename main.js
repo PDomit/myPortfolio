@@ -1,7 +1,7 @@
 // USTAWIANIE POCZĄTKU STRONY PO ODSWIEŻENIU
-// window.onload = function(){
-//         window.scrollTo(0,0);
-// };
+ window.onload = function(){
+         window.scrollTo(0,0);
+ };
 
 
 //  USUNIĘCIE POCZATKOWEGO DIVA Z NAPISEM "HELOLO WORLD" PO 2.25 ms
@@ -68,7 +68,7 @@ let isThrottled = false;
 window.addEventListener('wheel', (e) => {
   console.log('Przesunięcie kółka myszy (deltaY):', e.deltaY);
   if (isThrottled) return;
-  //Potencjalnie Jump Scroll jeśli tam jest
+  //Potencjalnie Jump Scroll w góre od projektów
   const scrollableSection = sections[currentSection].classList.contains('ProjectsCont');
   if (scrollableSection) {
     const el = sections[currentSection];
@@ -95,6 +95,48 @@ function goToSection(index) {
     currentSection = index;
     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
   }
+
+  window.addEventListener('keyup', (e) => {
+    if(e.key === 'ArrowUp'){
+      if (isThrottled) return;
+      //Potencjalnie Jump Scroll w góre od projektów
+      const scrollableSection = sections[currentSection].classList.contains('ProjectsCont');
+      if (scrollableSection) {
+        const el = sections[currentSection];
+        const atTop = el.scrollTop === 0;
+        if (atTop) {
+          goToSection(currentSection - 1);
+          isThrottled = true;
+          setTimeout(() => (isThrottled = false), 200);
+              return;
+        }
+      }
+      // Normalne Jump Scroll dla innych sekcji    
+      else{
+        goToSection(currentSection - 1);
+        isThrottled = true;
+        setTimeout(() => (isThrottled = false),200);
+      }   
+    }
+
+    if(e.key === 'ArrowDown'){
+      if (isThrottled) return;
+      //Potencjalnie Jump Scroll w góre od projektów
+      const scrollableSection = sections[currentSection].classList.contains('ProjectsCont');
+      if (scrollableSection) {
+      }
+      // Normalne Jump Scroll dla innych sekcji    
+      else{
+        goToSection(currentSection + 1);
+        isThrottled = true;
+        setTimeout(() => (isThrottled = false),200);
+      }   
+    }
+
+  }, { passive: false });
+
+
+  
 
 
   //    BLOKOWANIE SCROLLOWANIA W SEKCJI Z PROJEKTAMI W ZALEZNOSCI OD DŁUGOŚCI AKTUALNIE WYBRANEGO SLAJDU 
