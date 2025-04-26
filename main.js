@@ -124,6 +124,9 @@ function goToSection(index) {
       //Potencjalnie Jump Scroll w góre od projektów
       const scrollableSection = sections[currentSection].classList.contains('ProjectsCont');
       if (scrollableSection) {
+        scrollableDiv.setAttribute('tabindex', '0'); // najpierw upewnij się, że div jest focusowalny
+        scrollableDiv.focus();
+        return; 
       }
       // Normalne Jump Scroll dla innych sekcji    
       else{

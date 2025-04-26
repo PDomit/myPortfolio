@@ -135,6 +135,7 @@ body {
     /* align-items: center;
     text-align: center; */
     /* overflow-y: scroll; */
+    outline: none;
     
 }
 .ProjectsCont::-webkit-scrollbar {
