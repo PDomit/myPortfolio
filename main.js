@@ -96,7 +96,7 @@ function goToSection(index) {
     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
   }
 
-  window.addEventListener('keyup', (e) => {
+  window.addEventListener('keydown', (e) => {
     if(e.key === 'ArrowUp'){
       if (isThrottled) return;
       //Potencjalnie Jump Scroll w góre od projektów
