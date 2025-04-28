@@ -81,7 +81,7 @@ window.addEventListener('wheel', (e) => {
 
     return;
   }
-  // Normalne Jump Scroll dla innych sekcji
+  // SCROLL JUMP DLA INNYCH SEKCJI
   if (e.deltaY > 0) {
     goToSection(currentSection + 1);
   } else {
@@ -96,7 +96,9 @@ function goToSection(index) {
     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
   }
 
-  window.addEventListener('keyup', (e) => {
+
+  // SCROLL STRZAŁKAMI
+  window.addEventListener('keydown', (e) => {
     if(e.key === 'ArrowUp'){
       if (isThrottled) return;
       //Potencjalnie Jump Scroll w góre od projektów
@@ -137,10 +139,6 @@ function goToSection(index) {
     }
 
   }, { passive: false });
-
-
-  
-
 
   //    BLOKOWANIE SCROLLOWANIA W SEKCJI Z PROJEKTAMI W ZALEZNOSCI OD DŁUGOŚCI AKTUALNIE WYBRANEGO SLAJDU 
   const scrollableDiv = document.getElementById('ProjectsCont');
