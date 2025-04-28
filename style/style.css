@@ -223,12 +223,14 @@ body {
     margin: 0;
     margin-top: 50px;
     filter: invert(100%);
-    animation: ArrowShowUp 1s ease-out 3.5s forwards ;
     transition: 0.2s;
 }
 .ArrowDownImg:hover {
     transform: scale(1.5);
     filter: brightness(0) saturate(100%) invert(47%) sepia(27%) saturate(643%) hue-rotate(78deg) brightness(93%) contrast(92%);
+}
+.ArrowDownImgAnim{
+    animation: ArrowShowUp 1s ease-out 3.5s forwards ;
 }
 .MyImg {
     height: 30vw;
@@ -285,6 +287,7 @@ body {
     margin: 0;
     opacity: 0;
 }
+
 .StartText_Name{
     text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

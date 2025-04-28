@@ -1,5 +1,15 @@
 // USTAWIANIE POCZĄTKU STRONY PO ODSWIEŻENIU
  window.onload = function(){
+  const box1 = document.getElementById('box1');
+  const box2 = document.getElementById('box2');
+  const box3 = document.getElementById('box3');
+  const box4 = document.getElementById('box4');
+  const box5 = document.getElementById('box5');
+  box1.classList.add('StartTextAnimation1');
+  box2.classList.add('StartTextAnimation2');
+  box3.classList.add('StartTextAnimation2');
+  box4.classList.add('StartTextAnimation2');
+  box5.classList.add('ArrowDownImgAnim');
   window.scrollTo(0,0);
   //  USUNIĘCIE POCZATKOWEGO DIVA Z NAPISEM "HELOLO WORLD" PO 2.25 ms
   setTimeout(function () {
