@@ -3,6 +3,7 @@
   if (window.location.hash) {
     history.replaceState(null, null, window.location.pathname);
   }
+  document.getElementById('Start').scrollIntoView({ behavior: 'smooth' });
   const box1 = document.getElementById('box1');
   const box2 = document.getElementById('box2');
   const box3 = document.getElementById('box3');
