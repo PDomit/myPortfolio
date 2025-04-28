@@ -340,7 +340,12 @@ body {
     margin: 0;
     align-content: center;
     padding: 0;
+    
 }
+.ContactsLinks{
+    text-decoration: none;
+}
+
 .ProjectsText_Navigation{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1vw;
