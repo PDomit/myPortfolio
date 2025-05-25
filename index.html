@@ -76,6 +76,7 @@
         <a><h1 class="ProjectsText_Navigation ProjectsText_Navigation_Activated">PROJECT1</h1></a>
         <a><h1 class="ProjectsText_Navigation ">PROJECT2</h1></a>
         <a><h1 class="ProjectsText_Navigation ">PROJECT3</h1></a>
+        <a><h1 class="ProjectsText_Navigation ">PROJECT4</h1></a>
       </div>
 
       <div class="ProjectsCont_Slide ProjectsCont_Slide_Activated" > <!-- MECHATRONICS_TESTER--> 
@@ -318,7 +319,55 @@
           </div>
         </div>
       </div>
-
+      <div class="ProjectsCont_Slide" >     <!-- Float32 multiplication-->
+        <div class="ProjectsCont_Left">
+        </div>
+        <div class="ProjectsCont_Right" >
+          <h1 class="AllText_Chapter">Single Precision Floating Point numbers multiplication</h1>
+          <hr class="ProjectsObject_Line">
+          <p class="AllText_Paragraph">
+            I created an algorithm in assembly in order to calculate a result of a multiplication of two single precision floating point numbers without a floating point unit. The objective was to create the algorithm and 
+            test it using Python.
+          </p> 
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Assembler.png" id="WiderImage" />
+            <div>
+              <h1 class="AllText_Chapter_2">Assembly code</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                The function was written in assembly for the ARMv7 architecture. For now the function does not support denormalized numbers so the minimal number the function returns is 2^(-126). 
+                The code is avaible on my GitHub.
+              </p>
+            </div>
+          </div>
+          <div class="ProjectCont_Right_Sections">
+            <img class="ProjectsImages" src="images/Python.png" id="WiderImage" />
+            <div>
+              <h1 class="AllText_Chapter_2">Testing script</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                In order to test the algorithm I creaded a script in Python. The script sends numbers to a MCU with the Cortex M4 via UART and the MCU returns a result of multiplication.
+                Then the script checks if the result is correct. Wrong results are counted and printed.
+              </p>
+            </div>
+          </div>  
+          <div class="ProjectCont_Right_Sections">
+            <div></div>
+            <div>
+              <h1 class="AllText_Chapter_2">Technologies, tools, knowledge, problems</h1>
+              <hr class="ProjectsObject_LineShort">
+              <p class="AllText_Paragraph">
+                Languages: Assembly, Python <br>
+                Environments: STM32 Cube IDE, Pycharm <br>
+                debugging, tests<br>
+                It was a challenging task but also intresting because of bare metal programming. Challenging part was how to create as optimised code as it was possible and to check all conditions like for example
+                passing NaN value, or inf result. Testing a code using Python was extremly helpful. The script has checked many options nad returned wrong calculations so I was able to 
+                fix it.  
+              </p>
+            </div>
+          </div>                         
+        </div>
+      </div>
       <div class="ProjectCont_Right_Bottom">
       </div>
 
