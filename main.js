@@ -22,11 +22,15 @@
     }, 2250);
 
 
-  // AKTUALIZACJA AKTUALNEJ POPZYCJI NA  STRONIE DLA INFORMACJI JUMP SCROLLA - BEZ TEGO PO UZYCIU STRZALKI W DOL JEDEN SCROLL W DOL BYLBY PUSTY BO MYŚŁAŁBY ZE JEST W KONTENERZE 0 I PRZEWIJAŁBY DO KONTENERA1
+  // AKTUALIZACJA AKTUALNEJ POZYCJI NA  STRONIE DLA INFORMACJI JUMP SCROLLA - BEZ TEGO PO UZYCIU STRZALKI W DOL JEDEN SCROLL W DOL BYLBY PUSTY BO MYŚŁAŁBY ZE JEST W KONTENERZE 0 I PRZEWIJAŁBY DO KONTENERA1
   //W KTÓRYM SIĘ ZNAJDUJE
   const ArrowDown = document.getElementById('ArrowDown');
   ArrowDown.addEventListener("click", function(e) {
       currentSection = 1;
+  });
+  const ArrowDown2 = document.getElementById('ArrowDown2');
+  ArrowDown2.addEventListener("click", function(e) {
+      currentSection = 2;
   });
 
 
@@ -89,6 +93,7 @@
         isThrottled = true;
         setTimeout(() => (isThrottled = false), 200);
       }
+      
 
       return;
     }

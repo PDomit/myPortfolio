@@ -40,27 +40,11 @@
       <div class="AboutMeCont_Right">
         <h1 class="AllText_Chapter">ABOUT ME</h1>
         <p class="AllText_Paragraph">
-          I’m an ambitious and persistent engineer who
-          always follows through on goals. I do love
-          electronics. I’m driven by a strong desire to learn
-          and improve, and I find great satisfaction in
-          creating something usefull. I have a solid
-          understanding of electronics and circuit design,
-          which allows me to take a full-stack approach to
-          embedded systems – from hardware to firmware.
-          A solid understanding of the basics makes
-          learning new things much easier. I am very
-          creative and I like solving problems. I can work in
-          a team as well as on my own.  I'm looking for a job
-          which offers me growth.
+          I work with embedded systems – both programming microcontrollers and designing electronic circuits. My projects which reflect my passion and skills are avaible below this 
+          section. I am looking for a position as embedded software engineer to contribute in commercial projects and continue growing as professional.
+           Knowledge of both hardware and software is my adavantage.
         </p>
-      </div>
-    </div>
-    <!-- KONTENER Z DANYMI KONTAKTOWYMI -->
-    <div class="ContactsCont ScrollClass">
-      <div class="ContactsCont_Right">
-        <h1 class="AllText_Chapter">CONTACT</h1>
-        <div class="ContactCont_List">
+         <div class="ContactCont_List">
           <img src="images/LinkedIn.png" class="ContactIcon">
           <a href = "https://www.linkedin.com/in/piotr-domiter-b9670a2b9/?originalSubdomain=pl" target ="_blank" class="ContactsLinks"><p class="ContactsText_Paragraph"> @Piotr Domiter LinkedIn</p></a>
           <img src="images/GitHub.png" class="ContactIcon">
@@ -68,6 +52,9 @@
           <img src="images/Gmail.png" class="ContactIcon">
           <a  href="mailto:piotrdomiter@gmail.com" target="_blank" class="ContactsLinks"><p class="ContactsText_Paragraph">piotrdomiter@gmail.com</p></a>
         </div>
+                <a href="#ProjectsCont" id="ArrowDown2"
+          ><img src="images/arrow.png" class="ArrowDownImg2" id="box5"
+        /></a>
       </div>
     </div>
     <!-- KONTENER Z PROJEKTAMI -->
@@ -93,7 +80,7 @@
             is the loss of pressure too fast because of a crack in the mechatronic's body. The device helps to find out if a mechatronics has a crack or not. This project cosists of several main parts which required different knowledge and skills.
           </p>
           <div class="ProjectCont_Right_Sections"> 
-            <img class="ProjectsImages" src="images/Testing.jpg">
+            <img class="ProjectsImages" src="images/Unit_opened.jpg">
             <div> 
               <h1 class="AllText_Chapter_2">How does it work ?</h1>
               <hr class="ProjectsObject_LineShort">
@@ -101,31 +88,30 @@
                 The principle is to start the hydraulic pump by clicking a button in the application window. The pressure rises. When the pressure reaches the appropriate level the pump stops. The device 
                 is connected to mechatronic's pressure sensor and measure the pressure every second. When the pressure falls below the minimum level the pump starts again and 
                 the time interval between stopping and starting the pump is shown in the application window. This time interval helps to detect if the pressure drops too quickly. The procedure can be 
-                repeated after changing the position of the valves for example when changing gears. The photo on the left was taken while testing the pump in the friendly workshop where I have worked
-                and where I was allowed to test my device.
+                repeated after changing the position of the valves for example when changing gears. 
               </p>
             </div>
           </div>
           <div class="ProjectCont_Right_Sections">
-            <img class="ProjectsImages" src="images/Electrical_circuits.jpg" />
+            <img class="ProjectsImages" src="images/Testing.jpg" />
             <div> 
               <h1 class="AllText_Chapter_2">Electrical circuits</h1>
               <hr class="ProjectsObject_LineShort">
               <p class="AllText_Paragraph">
-                The electrical circuits was designed from scratch in order to controll solenoids and the bldc motor. The objective was to design circuits capable of handling up to 30A current and that could be controlled by STM32 microcontroller.
-                The BLDC motors used in those mecahtronics don't have Hall sensors so I had to design circuits which could conduct commutation based on the back emf. The phase voltages had to be measured and filtered to finally provide the information
-                abut the rotor position. I did not have opportunity to obtain PCB so I soldered it together using a universal board.
+                The electrical circuits was designed from scratch in order to controll solenoids and the BLDC motor. The objective was to design circuits capable of handling up to 20A current and that could be controlled by STM32 microcontroller.
+                The BLDC motors used in those mechatronics don't have Hall sensors so I had to design circuits which could conduct commutation based on the back-EMF. The phase voltages had to be measured and filtered to finally provide the information
+                about the rotor position. I soldered it together using a universal board.
               </p>
             </div>
           </div>
           <div class="ProjectCont_Right_Sections">
-            <img class="ProjectsImages" src="images/Running.jpg" />
+            <img class="ProjectsImages" src="images/running2.jpg" />
             <div> 
               <h1 class="AllText_Chapter_2">Firmware</h1>
               <hr class="ProjectsObject_LineShort">
               <p class="AllText_Paragraph">
                 The STM32 board controls BLDC, valves and communicates with PC via UART. The firmware was created in the C language in STM32 Cube IDE environment. The firmware 
-                has not been publicly shared. The photo on the left shows voltage of a phase while the motor is running.
+                has not been publicly shared. The photo on the left shows voltages of a phases while the motor is running.
               </p>
            </div>
           </div>
@@ -142,7 +128,7 @@
             </div>
           </div>
           <div class="ProjectCont_Right_Sections">
-            <img class="ProjectsImages" src="images/Cooling.jpg" />
+            <img class="ProjectsImages" src="images/Unit_closed.jpg" />
             <div>
               <h1 class="AllText_Chapter_2">Future prospects</h1>
               <hr class="ProjectsObject_LineShort">
@@ -161,7 +147,7 @@
                 Languages: C, C#, Assembler<br>
                 Environments: STM32 Cube IDE, Visual Studio<br>
                 PWM, ADC, UART, Timers, BLDC, debugging<br>
-                The most challenging stage was creating bldc controller. This BLDC motor is quite different than most of bldc motors because it has the delta connection inside. I have been dealing with
+                The most challenging stage was creating BLDC controller. I have been dealing with
                 how to make the motor work in closed loop for a while but finally I succeeded. I have never created any Windows application before so I have started learning C# and quickly developed the application.
                 This project gave me a great deal of experience with hardware, firmware and some soft skills such as work organising, documentation. I discovered that writing my thoughts and drawing helps me solve problems
                 more effectively.
@@ -232,7 +218,7 @@
           <hr class="ProjectsObject_Line">
           <p class="AllText_Paragraph">
             HiL simulation was the topic of my master's thesis. The objective was to build HiL testing station for a car with dual clutch automatic gearbox DQ250. 
-            The testing station consists of: HiL symulator, a Simulink-based car model with the DQ250 gearbox, 
+            The testing station consists of: HiL simulator, a Simulink-based car model with the DQ250 gearbox, 
             STM32 board acting as gearbox controller and a box with a LCD screen and two potentiometers to set brake and gas pedals positions during tests.
           </p> 
           <div class="ProjectCont_Right_Sections">
@@ -241,8 +227,8 @@
               <h1 class="AllText_Chapter_2">HiL simulator</h1>
               <hr class="ProjectsObject_LineShort">
               <p class="AllText_Paragraph">
-                The simulator belongs to AGH The University of Science and Technology in Krakówv. The simulator consists of a computer equipped with measurement cards and software that runs simulations based on input signals from the cards and code.
-                generated from the plant model of a car. 
+                The simulator belongs to AGH The University of Science and Technology in Kraków. The simulator consists of a computer equipped with measurement cards and software that runs simulations based on input signals from the cards and code, which
+                was generated from the plant model of a car. 
               </p>
             </div>
           </div>
@@ -286,8 +272,8 @@
               <hr class="ProjectsObject_LineShort">
               <p class="AllText_Paragraph">
                 Finally, I conducted several tests, and the results were analyzed in my master’s thesis. 
-                I tested whether the car could operate properly, whether changes in the firmware—such as faster clutch engagement or extending the upper engine speed 
-                limit—could improve the car’s dynamics and to what extent, and whether the controller was able to detect faults such as low clutch pressure or gear engagement failure.
+                I tested whether the car could operate properly, whether changes in the firmware such as faster clutch engagement or extending the upper engine speed 
+                limit could improve the car’s dynamics and to what extent. Finally whether the controller was able to detect faults such as low clutch pressure or gear engagement failure.
               </p>
             </div>
           </div>
@@ -346,7 +332,7 @@
               <h1 class="AllText_Chapter_2">Testing script</h1>
               <hr class="ProjectsObject_LineShort">
               <p class="AllText_Paragraph">
-                In order to test the algorithm I creaded a script in Python. The script sends numbers to a MCU with the Cortex M4 via UART and the MCU returns a result of multiplication.
+                In order to test the algorithm I created a script in Python. The script sends numbers to a MCU with the Cortex M4 via UART and the MCU returns a result of multiplication.
                 Then the script checks if the result is correct. Wrong results are counted and printed.
               </p>
             </div>
@@ -361,7 +347,7 @@
                 Environments: STM32 Cube IDE, Pycharm <br>
                 debugging, tests<br>
                 It was a challenging task but also intresting because of bare metal programming. Challenging part was how to create as optimised code as it was possible and to check all conditions like for example
-                passing NaN value, or inf result. Testing a code using Python was extremly helpful. The script has checked many options nad returned wrong calculations so I was able to 
+                passing NaN value, or inf. Testing a code using Python was extremely helpful. The script has checked many options and returned wrong calculations so I was able to 
                 fix it.  
               </p>
             </div>
@@ -374,6 +360,20 @@
       <a id="ArrowUp"
       ><img src="images/arrowUp.png" class="ArrowUpImg"
       /></a>
+    </div>
+        <!-- KONTENER Z DANYMI KONTAKTOWYMI -->
+    <div class="ContactsCont ScrollClass">
+      <div class="ContactsCont_Right">
+        <h1 class="AllText_Chapter">CONTACT</h1>
+        <div class="ContactCont_List">
+          <img src="images/LinkedIn.png" class="ContactIcon">
+          <a href = "https://www.linkedin.com/in/piotr-domiter-b9670a2b9/?originalSubdomain=pl" target ="_blank" class="ContactsLinks"><p class="ContactsText_Paragraph"> @Piotr Domiter LinkedIn</p></a>
+          <img src="images/GitHub.png" class="ContactIcon">
+          <a href = "https://github.com/PDomit" target="_blank" class="ContactsLinks"><p class="ContactsText_Paragraph" >@PDomit GitHub</p></a>
+          <img src="images/Gmail.png" class="ContactIcon">
+          <a  href="mailto:piotrdomiter@gmail.com" target="_blank" class="ContactsLinks"><p class="ContactsText_Paragraph">piotrdomiter@gmail.com</p></a>
+        </div>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>
